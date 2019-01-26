@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Base
   - Enemy
+  - Regen
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Obstacle
   - Dog
   - Bag
-  - 
-  - 
+  - Powerup
+  - Enemy
   - 
   - 
   - 
@@ -42,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Chain
+    uniqueID: 1954194857
+    locked: 0
+  - name: Bag
+    uniqueID: 3148340247
+    locked: 0
+  - name: Enemy
+    uniqueID: 1384604281
+    locked: 0
+  - name: Player
+    uniqueID: 2916061453
+    locked: 0
+  - name: UI
+    uniqueID: 3939398275
     locked: 0

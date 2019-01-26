@@ -19,7 +19,7 @@ public class Chain : MonoBehaviour
 
         for (var i = 0; i < ChainCount; i++)
         {
-            var chain = Instantiate(ChainPrefab);
+            var chain = Instantiate(ChainPrefab, transform.position, Quaternion.identity);
             var rigid = chain.GetComponent<Rigidbody2D>();
 
             chain.distance = ChainGap;
@@ -38,6 +38,23 @@ public class Chain : MonoBehaviour
             {
                 chain.connectedBody = Target;
             }
+
+            joints.Add(chain);
+        }
+    }
+
+    public void AddChain(int cnt)
+    {
+        for (var i = 0; i < cnt; i++)
+        {
+            var chain = Instantiate(ChainPrefab, Target.position, Quaternion.identity);
+            var rigid = chain.GetComponent<Rigidbody2D>();
+
+            joints[joints.Count - 1].connectedBody = rigid;
+
+            chain.distance = ChainGap;
+
+            chain.connectedBody = Target;
 
             joints.Add(chain);
         }
