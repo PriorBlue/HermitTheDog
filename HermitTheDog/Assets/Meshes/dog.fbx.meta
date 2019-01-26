@@ -1,0 +1,526 @@
+fileFormatVersion: 2
+guid: a83e07446a8a9524a8dd26c4f18b702f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: dog
+    100004: dog_ear_1_L
+    100006: dog_ear_1_L 1
+    100008: dog_ear_1_R
+    100010: dog_ear_1_R 1
+    100012: dog_ear_2_L
+    100014: dog_ear_2_L 1
+    100016: dog_ear_2_R
+    100018: dog_ear_2_R 1
+    100020: dog_ear_tip_L
+    100022: dog_ear_tip_L 1
+    100024: dog_ear_tip_R
+    100026: dog_ear_tip_R 1
+    100028: dog_foot_back_L
+    100030: dog_foot_back_L 1
+    100032: dog_foot_back_R
+    100034: dog_foot_back_R 1
+    100036: dog_foot_back_tip_L
+    100038: dog_foot_back_tip_L 1
+    100040: dog_foot_back_tip_R
+    100042: dog_foot_back_tip_R 1
+    100044: dog_foot_front_L
+    100046: dog_foot_front_L 1
+    100048: dog_foot_front_R
+    100050: dog_foot_front_R 1
+    100052: dog_foot_front_tip_L
+    100054: dog_foot_front_tip_L 1
+    100056: dog_foot_front_tip_R
+    100058: dog_foot_front_tip_R 1
+    100060: dog_head
+    100062: dog_head 1
+    100064: dog_head_tip
+    100066: dog_head_tip 1
+    100068: dog_leg_back_lower_L
+    100070: dog_leg_back_lower_L 1
+    100072: dog_leg_back_lower_R
+    100074: dog_leg_back_lower_R 1
+    100076: dog_leg_back_upper_L
+    100078: dog_leg_back_upper_L 1
+    100080: dog_leg_back_upper_R
+    100082: dog_leg_back_upper_R 1
+    100084: dog_leg_front_lower_L
+    100086: dog_leg_front_lower_L 1
+    100088: dog_leg_front_lower_R
+    100090: dog_leg_front_lower_R 1
+    100092: dog_leg_front_upper_L
+    100094: dog_leg_front_upper_L 1
+    100096: dog_leg_front_upper_R
+    100098: dog_leg_front_upper_R 1
+    100100: dog_master
+    100102: dog_master 1
+    100104: dog_neck
+    100106: dog_neck 1
+    100108: dog_root
+    100110: dog_root 1
+    100112: dog_snout
+    100114: dog_snout 1
+    100116: dog_snout_tip
+    100118: dog_snout_tip 1
+    100120: dog_spine
+    100122: dog_spine 1
+    100124: dog_tail_1
+    100126: dog_tail_1 1
+    100128: dog_tail_2
+    100130: dog_tail_2 1
+    100132: dog_tail_3
+    100134: dog_tail_3 1
+    400000: //RootNode
+    400002: dog
+    400004: dog_ear_1_L
+    400006: dog_ear_1_L 1
+    400008: dog_ear_1_R
+    400010: dog_ear_1_R 1
+    400012: dog_ear_2_L
+    400014: dog_ear_2_L 1
+    400016: dog_ear_2_R
+    400018: dog_ear_2_R 1
+    400020: dog_ear_tip_L
+    400022: dog_ear_tip_L 1
+    400024: dog_ear_tip_R
+    400026: dog_ear_tip_R 1
+    400028: dog_foot_back_L
+    400030: dog_foot_back_L 1
+    400032: dog_foot_back_R
+    400034: dog_foot_back_R 1
+    400036: dog_foot_back_tip_L
+    400038: dog_foot_back_tip_L 1
+    400040: dog_foot_back_tip_R
+    400042: dog_foot_back_tip_R 1
+    400044: dog_foot_front_L
+    400046: dog_foot_front_L 1
+    400048: dog_foot_front_R
+    400050: dog_foot_front_R 1
+    400052: dog_foot_front_tip_L
+    400054: dog_foot_front_tip_L 1
+    400056: dog_foot_front_tip_R
+    400058: dog_foot_front_tip_R 1
+    400060: dog_head
+    400062: dog_head 1
+    400064: dog_head_tip
+    400066: dog_head_tip 1
+    400068: dog_leg_back_lower_L
+    400070: dog_leg_back_lower_L 1
+    400072: dog_leg_back_lower_R
+    400074: dog_leg_back_lower_R 1
+    400076: dog_leg_back_upper_L
+    400078: dog_leg_back_upper_L 1
+    400080: dog_leg_back_upper_R
+    400082: dog_leg_back_upper_R 1
+    400084: dog_leg_front_lower_L
+    400086: dog_leg_front_lower_L 1
+    400088: dog_leg_front_lower_R
+    400090: dog_leg_front_lower_R 1
+    400092: dog_leg_front_upper_L
+    400094: dog_leg_front_upper_L 1
+    400096: dog_leg_front_upper_R
+    400098: dog_leg_front_upper_R 1
+    400100: dog_master
+    400102: dog_master 1
+    400104: dog_neck
+    400106: dog_neck 1
+    400108: dog_root
+    400110: dog_root 1
+    400112: dog_snout
+    400114: dog_snout 1
+    400116: dog_snout_tip
+    400118: dog_snout_tip 1
+    400120: dog_spine
+    400122: dog_spine 1
+    400124: dog_tail_1
+    400126: dog_tail_1 1
+    400128: dog_tail_2
+    400130: dog_tail_2 1
+    400132: dog_tail_3
+    400134: dog_tail_3 1
+    2100000: dog
+    4300000: dog
+    7400000: dog_idle
+    7400002: dog_walk
+    7400004: dog_bark
+    7400006: dog_run
+    7400008: dog_running_stretched
+    7400010: dog_running_contracted
+    7400012: dog_walk_R_forward
+    7400014: dog_walk_L_forward
+    7400016: dog_bark_top
+    7400018: dog_bark_ready
+    9500000: //RootNode
+    13700000: dog
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dog
+    second: {fileID: 2100000, guid: ca549cc33e6dde64c93bcb02618bdc7c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: dog_idle
+      takeName: dog_idle
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_walk
+      takeName: dog_walk
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_bark
+      takeName: dog_bark
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_run
+      takeName: dog_run
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_running_stretched
+      takeName: dog_running_stretched
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_running_contracted
+      takeName: dog_running_contracted
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_walk_R_forward
+      takeName: dog_walk_R_forward
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_walk_L_forward
+      takeName: dog_walk_L_forward
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_bark_top
+      takeName: dog_bark_top
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dog_bark_ready
+      takeName: dog_bark_ready
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
