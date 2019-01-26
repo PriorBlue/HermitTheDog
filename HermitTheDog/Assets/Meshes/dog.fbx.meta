@@ -246,7 +246,7 @@ ModelImporter:
       name: dog_bark
       takeName: dog_bark
       firstFrame: 0
-      lastFrame: 11
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
