@@ -11,38 +11,40 @@ public class Movement : MonoBehaviour
 
     public float Speed = 1f;
 
-    private float x = 0;
-    private float y = 0;
+    private Vector2 direction = new Vector3(0f, 0f);
 
     private void Update()
     {
-        x = 0;
-        y = 0;
+        direction = new Vector3(0f, 0f);
 
         if (Input.GetKey(KeyCode.W))
         {
-            y += Speed;
+            direction.y += 1f;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            y -= Speed;
+            direction.y -= 1f;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            x -= Speed;
+            direction.x -= 1f;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            x += Speed;
+            direction.x += 1f;
+        }
+
+        if (direction.x != 0f || direction.y != 0f)
+        {
+            Model.rotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, 0f), Vector3.back);
         }
 
         if (Stun.Stuned == false)
         {
-            Rigid.velocity = new Vector2(x, y);
-            Rigid.rotation = Vector2.SignedAngle(new Vector2(-x, y), Vector2.up);
+            Rigid.velocity = direction.normalized * Speed;
         }
     }
 

@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public RectTransform Canvas;
     public Text HealthText;
     public Slider HealthSlider;
+    public Image HealthBar;
+
+    public Gradient HealthColor;
 
     public float HealthMax = 100f;
 
@@ -17,6 +21,8 @@ public class Health : MonoBehaviour
     {
         health = HealthMax;
         RefreshHealth();
+
+        HealthText.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -74,7 +80,12 @@ public class Health : MonoBehaviour
 
     public void RefreshHealth()
     {
-        HealthText.text = string.Format("{0:0}", health);
+        //HealthText.text = string.Format("{0:0}", health);
         HealthSlider.value = health / HealthMax;
+        HealthBar.color = HealthColor.Evaluate(HealthSlider.value);
+
+        Canvas.sizeDelta = new Vector2(HealthMax * 0.2f, 4f);
+
+        //HealthText.gameObject.SetActive(health < HealthMax);
     }
 }
