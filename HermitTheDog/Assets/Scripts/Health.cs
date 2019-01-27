@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -45,6 +46,11 @@ public class Health : MonoBehaviour
 
             if (health <= 0)
             {
+                if (gameObject.tag == "Player")
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+
                 Destroy(gameObject);
             }
         }
