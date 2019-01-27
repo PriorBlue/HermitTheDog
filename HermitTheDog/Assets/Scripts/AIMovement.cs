@@ -7,6 +7,7 @@ public class AIMovement : MonoBehaviour
     public Transform Target;
     public Transform Model;
     public Stunable Stun;
+    public Animator Animator;
 
     public float Speed = 1f;
 
@@ -27,10 +28,14 @@ public class AIMovement : MonoBehaviour
 
             rigid.velocity = direction.normalized * Speed;
 
-            if (direction.x != 0 || direction.y != 0)
+            var isWalking = direction.x != 0f || direction.y != 0f;
+
+            if (isWalking)
             {
                 Model.rotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, 0f), Vector3.back);
             }
+
+            Animator.SetBool("walk", isWalking);
         }
     }
 }

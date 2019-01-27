@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Capture : MonoBehaviour
 {
@@ -35,6 +36,11 @@ public class Capture : MonoBehaviour
         }
 
         RefreshCapture();
+
+        if (capture == 0f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)

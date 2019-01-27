@@ -11,6 +11,11 @@ public class Spawn : MonoBehaviour
 
     private float timer = 0f;
 
+    private void Start()
+    {
+        timer = Delay * 0.75f;
+    }
+
     private void Update()
     {
         if (timer < Delay)
@@ -27,6 +32,11 @@ public class Spawn : MonoBehaviour
             if (ai != null)
             {
                 ai.Target = Target;
+            }
+
+            if (Delay >= 10)
+            {
+                Delay -= 5;
             }
         }
     }

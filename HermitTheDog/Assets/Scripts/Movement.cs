@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public Transform Model;
     public Stunable Stun;
     public Chain BagCain;
+    public Animator Animator;
 
     public float Speed = 1f;
 
@@ -36,11 +37,19 @@ public class Movement : MonoBehaviour
         {
             direction.x += 1f;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
-        if (direction.x != 0f || direction.y != 0f)
+        var isWalking = direction.x != 0f || direction.y != 0f;
+
+        if (isWalking)
         {
             Model.rotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, 0f), Vector3.back);
         }
+
+        Animator.SetBool("walk", isWalking);
 
         if (Stun.Stuned == false)
         {
