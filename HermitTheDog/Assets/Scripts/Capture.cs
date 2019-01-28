@@ -26,7 +26,7 @@ public class Capture : MonoBehaviour
     {
         if (iScaptured)
         {
-            capture = Mathf.Clamp(capture - Time.deltaTime * 4f, 0, CaptureMax);
+            capture = Mathf.Clamp(capture - Time.deltaTime * 10f, 0, CaptureMax);
 
             iScaptured = false;
         }

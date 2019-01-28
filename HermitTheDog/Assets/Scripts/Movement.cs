@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public Stunable Stun;
     public Chain BagCain;
     public Animator Animator;
+    public PopupMessage Popup;
 
     public float Speed = 1f;
 
@@ -53,7 +54,7 @@ public class Movement : MonoBehaviour
 
         if (Stun.Stuned == false)
         {
-            Rigid.velocity = direction.normalized * Speed;
+            Rigid.velocity = direction.normalized * Speed * Time.deltaTime;
         }
     }
 
@@ -66,6 +67,16 @@ public class Movement : MonoBehaviour
             Speed += powerup.Speed;
 
             BagCain.AddChain(powerup.Chain);
+
+            if (powerup.Speed > 0)
+            {
+                Popup.CreatePopup("+ " + powerup.Speed + " SPD", Color.cyan);
+            }
+
+            if (powerup.Chain > 0)
+            {
+                Popup.CreatePopup("+ " + powerup.Chain + " Chains", Color.magenta);
+            }
 
             Destroy(powerup.gameObject);
         }

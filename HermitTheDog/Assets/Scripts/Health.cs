@@ -10,10 +10,13 @@ public class Health : MonoBehaviour
     public Text HealthText;
     public Slider HealthSlider;
     public Image HealthBar;
+    public PopupMessage Popup;
 
     public Gradient HealthColor;
 
     public float HealthMax = 100f;
+
+    public float Defence = 0f;
 
     private float health = 100f;
     private bool inBase = false;
@@ -31,8 +34,13 @@ public class Health : MonoBehaviour
         if (inBase)
         {
             health = Mathf.Clamp(health + Time.deltaTime * 10f, 0, HealthMax);
-            RefreshHealth();
         }
+        else
+        {
+            health = Mathf.Clamp(health + Time.deltaTime * 2f, 0, HealthMax);
+        }
+
+        RefreshHealth();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,10 +49,15 @@ public class Health : MonoBehaviour
 
         if (attack != null && collision.gameObject.tag != gameObject.tag)
         {
-            health = Mathf.Clamp(health - attack.Damage, 0, HealthMax);
+            health = Mathf.Clamp(health - Mathf.Max(attack.Damage - Defence, 1f), 0, HealthMax);
             RefreshHealth();
 
-            if (health <= 0)
+            if (Popup != null && gameObject.tag != "Player")
+            {
+                Popup.CreatePopup(attack.Damage, Color.red);
+            }
+
+            if (health <= 0f)
             {
                 if (gameObject.tag == "Player")
                 {
@@ -71,6 +84,20 @@ public class Health : MonoBehaviour
             health = Mathf.Clamp(health + powerup.Health, 0, HealthMax);
 
             RefreshHealth();
+
+            if (powerup.MaxHealth > 0f)
+            {
+                Popup.CreatePopup("+ " + powerup.MaxHealth + " Max HP", Color.yellow);
+            }
+            else if (powerup.Health > 0f)
+            {
+                Popup.CreatePopup("+ " + powerup.Health + " HP", Color.green);
+            }
+
+            if (powerup.Defence > 0f)
+            {
+                Popup.CreatePopup("+ " + powerup.Defence + " DEF", Color.gray);
+            }
 
             Destroy(powerup.gameObject);
         }

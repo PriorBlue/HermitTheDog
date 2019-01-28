@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float Damage = 10;
+    public PopupMessage Popup;
+
+    public float Damage = 10f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,6 +15,11 @@ public class Attack : MonoBehaviour
         if (powerup != null)
         {
             Damage += powerup.Attack;
+
+            if (Popup != null && powerup.Attack > 0)
+            {
+                Popup.CreatePopup("+ " + powerup.Attack + " ATK", Color.yellow);
+            }
 
             Destroy(powerup.gameObject);
         }

@@ -26,7 +26,7 @@ public class AIMovement : MonoBehaviour
         {
             direction = Target.position - transform.position;
 
-            rigid.velocity = direction.normalized * Speed;
+            rigid.velocity = direction.normalized * Speed * Time.deltaTime;
 
             var isWalking = direction.x != 0f || direction.y != 0f;
 
