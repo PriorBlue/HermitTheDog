@@ -32,7 +32,7 @@ public class Capture : MonoBehaviour
         }
         else
         {
-            capture = Mathf.Clamp(capture + Time.deltaTime * 2f, 0, CaptureMax);
+            capture = Mathf.Clamp(capture + Time.deltaTime * 5f, 0, CaptureMax);
         }
 
         RefreshCapture();

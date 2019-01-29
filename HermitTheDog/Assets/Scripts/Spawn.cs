@@ -34,9 +34,9 @@ public class Spawn : MonoBehaviour
                 ai.Target = Target;
             }
 
-            if (Delay >= 10)
+            if (Delay > 10)
             {
-                Delay -= 5;
+                Delay -= 2;
             }
         }
     }
