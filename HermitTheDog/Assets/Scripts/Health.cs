@@ -87,7 +87,7 @@ public class Health : MonoBehaviour
 
             if (powerup.MaxHealth > 0f)
             {
-                Popup.CreatePopup("+ " + powerup.MaxHealth + " Max HP", Color.yellow);
+                Popup.CreatePopup("+ " + powerup.MaxHealth + " Max HP", Color.red);
             }
             else if (powerup.Health > 0f)
             {
