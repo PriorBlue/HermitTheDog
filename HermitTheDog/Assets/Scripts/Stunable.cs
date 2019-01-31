@@ -14,11 +14,11 @@ public class Stunable : MonoBehaviour
 
     private float timer = 0f;
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Stuned)
+        if (Stuned && Rigid.velocity != null)
         {
-            Rigid.velocity = StunDirection * StunSpeed;
+            Rigid.velocity = StunDirection * StunSpeed * Time.fixedDeltaTime;
 
             if (timer < StunTime)
             {
@@ -34,9 +34,9 @@ public class Stunable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var attack = collision.gameObject.GetComponent<Attack>();
+        var stun = collision.gameObject.GetComponent<Stunable>();
 
-        if (attack != null && collision.gameObject.tag != gameObject.tag)
+        if (stun != null && collision.gameObject.tag != gameObject.tag)
         {
             StunDirection = (transform.position - collision.transform.position);
             StunDirection = StunDirection.normalized;

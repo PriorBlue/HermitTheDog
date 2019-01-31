@@ -33,6 +33,16 @@ public class PopupMessage : MonoBehaviour
         }
     }
 
+    public void CreatePopup(int number, Powerup powerup)
+    {
+        CreatePopup(string.Format("+ {0} {1}", number, powerup.Affix), powerup.EffectColor);
+    }
+
+    public void CreatePopup(float number, Powerup powerup)
+    {
+        CreatePopup(string.Format("+ {0:0} {1}", number, powerup.Affix), powerup.EffectColor);
+    }
+
     public void CreatePopup(float number, Color color)
     {
         CreatePopup(string.Format("{0:0}", number), color);

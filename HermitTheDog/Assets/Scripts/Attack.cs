@@ -8,9 +8,9 @@ public class Attack : MonoBehaviour
 
     public float Damage = 10f;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        var powerup = other.GetComponent<Powerup>();
+        var powerup = collision.gameObject.GetComponent<Powerup>();
 
         if (powerup != null)
         {
@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
 
             if (Popup != null && powerup.Attack > 0)
             {
-                Popup.CreatePopup("+ " + powerup.Attack + " ATK", Color.yellow);
+                Popup.CreatePopup(powerup.Attack, powerup);
             }
 
             Destroy(powerup.gameObject);

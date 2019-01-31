@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 445551746447883864}
   - component: {fileID: 445551746447883870}
   - component: {fileID: 7450692893984402818}
+  - component: {fileID: 277670931177853458}
   - component: {fileID: 445551746447883866}
   - component: {fileID: 445551746447883867}
   m_Layer: 14
@@ -615,6 +616,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 445551746169774462}
   HealthBar: {fileID: 445551745364855947}
   Popup: {fileID: 7450692893984402818}
+  Drop: {fileID: 277670931177853458}
   HealthColor:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -677,6 +679,7 @@ MonoBehaviour:
   Stun: {fileID: 445551746447883870}
   Animator: {fileID: 2630782624703727485}
   Speed: 75
+  direction: {x: 1, y: 0}
 --- !u!114 &445551746447883870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +695,7 @@ MonoBehaviour:
   Rigid: {fileID: 445551746447883867}
   Stuned: 0
   StunTime: 0.25
-  StunSpeed: 3
+  StunSpeed: 150
 --- !u!114 &7450692893984402818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,6 +711,29 @@ MonoBehaviour:
   TextPrefab: {fileID: 2060152959613784775, guid: a2cd3d84ce755c6429b0d5a3ca8cd842,
     type: 3}
   Offset: 1.75
+--- !u!114 &277670931177853458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445551746447883865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ea8bd539e683845b0eaf8ff608f7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: {fileID: 445551746447883864}
+  DropRate: 50
+  Drops:
+  - {fileID: 3783246912365845657, guid: ca0a492edee246840a7b9087cc6f3188, type: 3}
+  RareDropRate: 20
+  RareDrops:
+  - {fileID: 7008133909687113295, guid: 7136ba83c0a288748b1c7e74ec82c8c8, type: 3}
+  - {fileID: 3290398572676182767, guid: 31cd1d8122aaa8340a187e2876d6fa7f, type: 3}
+  - {fileID: 3521220934481423535, guid: 0f9842ae0e791c44eb89a794e53a4c77, type: 3}
+  - {fileID: 3521220934481423535, guid: cc0958a28f5fad341ba36fe7544030dd, type: 3}
+  - {fileID: 6089082788173983244, guid: 9af3fe7e41f8a27409d932f637868655, type: 3}
 --- !u!58 &445551746447883866
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -743,7 +769,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!1001 &2630782624694317597
 PrefabInstance:

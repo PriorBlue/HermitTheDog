@@ -13,20 +13,20 @@ public class AIMovement : MonoBehaviour
 
     private Rigidbody2D rigid;
 
-    private Vector2 direction = new Vector2(1f, 0f);
+    public Vector2 direction = new Vector2(1f, 0f);
 
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Stun.Stuned == false)
         {
             direction = Target.position - transform.position;
 
-            rigid.velocity = direction.normalized * Speed * Time.deltaTime;
+            rigid.velocity = direction.normalized * Speed * Time.fixedDeltaTime;
 
             var isWalking = direction.x != 0f || direction.y != 0f;
 
@@ -36,6 +36,14 @@ public class AIMovement : MonoBehaviour
             }
 
             Animator.SetBool("walk", isWalking);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Target = collision.transform;
         }
     }
 }

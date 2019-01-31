@@ -70,8 +70,33 @@ PrefabInstance:
     - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
         type: 3}
       propertyPath: Health
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
+        type: 3}
+      propertyPath: EffectColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
+        type: 3}
+      propertyPath: EffectColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
+        type: 3}
+      propertyPath: EffectColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
+        type: 3}
+      propertyPath: Affix
+      value: HP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821208464554274563, guid: d661245665582ae4ca0af814b44d0ef8,
+        type: 3}
+      propertyPath: Bubble
+      value: 
+      objectReference: {fileID: 7427166237483544591}
     - target: {fileID: 141962828019449763, guid: d661245665582ae4ca0af814b44d0ef8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -79,3 +104,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cbabe727436fe9140aed0465f320b695, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d661245665582ae4ca0af814b44d0ef8, type: 3}
+--- !u!4 &7427166237483544591 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 241862955192468375, guid: d661245665582ae4ca0af814b44d0ef8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7226550361495565208}
+  m_PrefabAsset: {fileID: 0}

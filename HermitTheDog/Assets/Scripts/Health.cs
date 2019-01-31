@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public Slider HealthSlider;
     public Image HealthBar;
     public PopupMessage Popup;
+    public Drop Drop;
 
     public Gradient HealthColor;
 
@@ -31,16 +32,19 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if (inBase)
+        if (health < HealthMax)
         {
-            health = Mathf.Clamp(health + Time.deltaTime * 10f, 0, HealthMax);
-        }
-        else
-        {
-            health = Mathf.Clamp(health + Time.deltaTime * 2f, 0, HealthMax);
-        }
+            if (inBase)
+            {
+                health = Mathf.Clamp(health + Time.deltaTime * 10f, 0, HealthMax);
+            }
+            else
+            {
+                health = Mathf.Clamp(health + Time.deltaTime * 2f, 0, HealthMax);
+            }
 
-        RefreshHealth();
+            RefreshHealth();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -49,12 +53,14 @@ public class Health : MonoBehaviour
 
         if (attack != null && collision.gameObject.tag != gameObject.tag)
         {
-            health = Mathf.Clamp(health - Mathf.Max(attack.Damage - Defence, 1f), 0, HealthMax);
+            var damage = Mathf.Max(attack.Damage - Defence, 1f);
+
+            health = Mathf.Clamp(health - damage, 0, HealthMax);
             RefreshHealth();
 
             if (Popup != null && gameObject.tag != "Player")
             {
-                Popup.CreatePopup(attack.Damage, Color.red);
+                Popup.CreatePopup(damage, Color.red);
             }
 
             if (health <= 0f)
@@ -64,19 +70,16 @@ public class Health : MonoBehaviour
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
 
+                if (Drop != null)
+                {
+                    Drop.DropStuff();
+                }
+
                 Destroy(gameObject);
             }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Regen")
-        {
-            inBase = true;
-        }
-
-        var powerup = other.GetComponent<Powerup>();
+        var powerup = collision.gameObject.GetComponent<Powerup>();
 
         if (powerup != null)
         {
@@ -87,19 +90,27 @@ public class Health : MonoBehaviour
 
             if (powerup.MaxHealth > 0f)
             {
-                Popup.CreatePopup("+ " + powerup.MaxHealth + " Max HP", Color.red);
+                Popup.CreatePopup(powerup.MaxHealth, powerup);
             }
             else if (powerup.Health > 0f)
             {
-                Popup.CreatePopup("+ " + powerup.Health + " HP", Color.green);
+                Popup.CreatePopup(powerup.Health, powerup);
             }
 
             if (powerup.Defence > 0f)
             {
-                Popup.CreatePopup("+ " + powerup.Defence + " DEF", Color.gray);
+                Popup.CreatePopup(powerup.Defence, powerup);
             }
 
             Destroy(powerup.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Regen")
+        {
+            inBase = true;
         }
     }
 
@@ -113,12 +124,9 @@ public class Health : MonoBehaviour
 
     public void RefreshHealth()
     {
-        //HealthText.text = string.Format("{0:0}", health);
         HealthSlider.value = health / HealthMax;
         HealthBar.color = HealthColor.Evaluate(HealthSlider.value);
 
         Canvas.sizeDelta = new Vector2(HealthMax * 0.2f, 4f);
-
-        //HealthText.gameObject.SetActive(health < HealthMax);
     }
 }

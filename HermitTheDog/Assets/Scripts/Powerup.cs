@@ -5,6 +5,8 @@ using UnityEngine;
 public class Powerup : MonoBehaviour
 {
     public Transform Bubble;
+    public Color EffectColor;
+    public string Affix;
 
     public float Health = 0f;
     public float MaxHealth = 0f;
@@ -24,5 +26,11 @@ public class Powerup : MonoBehaviour
     {
         Bubble.position = new Vector3(Bubble.position.x, Bubble.position.y, (Mathf.Sin((Time.time + rand) * 2f) + 1f) * -0.1f - 0.1f);
         Bubble.localScale = new Vector3(0.2f, 0.2f, 0.2f) * ((Mathf.Cos((Time.time + rand) * 5f) * 0.1f) + 1f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = EffectColor;
+        Gizmos.DrawWireSphere(transform.position, 2f);
     }
 }

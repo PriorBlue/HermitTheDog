@@ -38,11 +38,15 @@ public class Movement : MonoBehaviour
         {
             direction.x += 1f;
         }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+    }
 
+    private void FixedUpdate()
+    {
         var isWalking = direction.x != 0f || direction.y != 0f;
 
         if (isWalking)
@@ -54,13 +58,13 @@ public class Movement : MonoBehaviour
 
         if (Stun.Stuned == false)
         {
-            Rigid.velocity = direction.normalized * Speed * Time.deltaTime;
+            Rigid.velocity = direction.normalized * Speed * Time.fixedDeltaTime;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        var powerup = other.GetComponent<Powerup>();
+        var powerup = collision.gameObject.GetComponent<Powerup>();
 
         if (powerup != null)
         {
@@ -70,12 +74,12 @@ public class Movement : MonoBehaviour
 
             if (powerup.Speed > 0)
             {
-                Popup.CreatePopup("+ " + powerup.Speed + " SPD", Color.cyan);
+                Popup.CreatePopup(powerup.Speed, powerup);
             }
 
             if (powerup.Chain > 0)
             {
-                Popup.CreatePopup("+ " + powerup.Chain + " Chains", Color.magenta);
+                Popup.CreatePopup(powerup.Chain, powerup);
             }
 
             Destroy(powerup.gameObject);
